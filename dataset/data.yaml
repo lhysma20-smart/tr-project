@@ -1,0 +1,9 @@
+path: .
+train: images/train
+val: images/val
+
+names:
+  0: tire
+  1: wear
+  2: crack
+  3: tear
