@@ -25,8 +25,10 @@ export default function TireProduct() {
         <p className="text-xs text-amberx">{state.store.recommended ? '⭐ 추천' : '선택 지점'}</p>
         <h2 className="mt-1 text-lg font-bold">{state.store.name}</h2>
         <p className="mt-1 text-sm text-slate-400">
-          평점 {state.store.rating} · {state.store.distance}
+          {state.store.rating != null && <>평점 {state.store.rating} · </>}
+          {state.store.distance}
         </p>
+        {state.store.address && <p className="mt-1 text-xs text-slate-500">{state.store.address}</p>}
       </Card>
       <div className="space-y-4">
         {tires.map((tire) => (

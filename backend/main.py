@@ -1,5 +1,10 @@
 from contextlib import asynccontextmanager
 
+from dotenv import load_dotenv
+
+# KAKAO_REST_API_KEY 등 환경변수를 다른 모듈이 import되기 전에 로드해야 한다.
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
